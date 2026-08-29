@@ -1,0 +1,16 @@
+# Python validation artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local servers and editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and local environment files
+*.log
+.env
+.env.*
+!.env.example
