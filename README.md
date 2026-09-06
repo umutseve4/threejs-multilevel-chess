@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/umutseve4/threejs-multilevel-chess/actions"><img src="https://github.com/umutseve4/threejs-multilevel-chess/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/umutseve4/threejs-multilevel-chess/actions/workflows/static-validation.yml"><img src="https://github.com/umutseve4/threejs-multilevel-chess/actions/workflows/static-validation.yml/badge.svg" alt="Static validation"></a>
   <img src="https://img.shields.io/badge/board%20levels-3-FF4D4F?style=flat-square" alt="3 levels">
   <img src="https://img.shields.io/badge/source%20files-1%20HTML-FF4D4F?style=flat-square" alt="1 HTML file">
 </p>
