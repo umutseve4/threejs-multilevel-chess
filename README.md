@@ -1,40 +1,57 @@
-# Tri-Level Chess
+<h1 align="center">Tri-Level Chess</h1>
 
-An interactive three-level 3D chess prototype built with Three.js in a single HTML file.
+<p align="center">
+  Chess played across three stacked boards, in your browser, from a single HTML file.<br>
+  Orbit the stack, lift a piece off one level and set it down on another.<br>
+  A visual interaction sandbox — <b>not</b> a chess-rules engine.
+</p>
 
-## What it is
+<p align="center">
+  <a href="https://github.com/umutseve4/threejs-multilevel-chess/actions"><img src="https://github.com/umutseve4/threejs-multilevel-chess/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/board%20levels-3-FF4D4F?style=flat-square" alt="3 levels">
+  <img src="https://img.shields.io/badge/source%20files-1%20HTML-FF4D4F?style=flat-square" alt="1 HTML file">
+</p>
 
-This is a visual interaction sandbox, **not a complete chess-rules engine**. Pieces can move between any empty squares across levels; turns and captures are tracked, but legal chess movement, check, checkmate, castling, promotion, and draw rules are intentionally out of scope.
+---
 
-## Run locally
-
-Serve the repository root over HTTP, then open `index.html`:
+## Run it in 30 seconds
 
 ```bash
+git clone https://github.com/umutseve4/threejs-multilevel-chess && cd threejs-multilevel-chess
 python -m http.server 8000
 ```
 
-Visit `http://localhost:8000`. An internet connection is required because Three.js is loaded from a version-pinned jsDelivr URL.
+Open http://localhost:8000. An internet connection is required — Three.js loads
+from a version-pinned jsDelivr URL.
 
 ## Controls
 
-- Drag: orbit the camera
-- Wheel: zoom
-- Click a piece, then a square: move
-- Click an opposing piece: capture
-- **Reset view**: restore the default camera
-- **Reset pieces**: restore the initial layout
+| Input | Action |
+|---|---|
+| Drag | Orbit the camera |
+| Wheel | Zoom |
+| Click a piece, then a square | Move |
+| Click an opposing piece | Capture |
+| **Reset view** | Restore the default camera |
+| **Reset pieces** | Restore the initial layout |
 
 ## Validation
-
-The dependency-free static test suite checks the document structure, accessibility-critical controls, pinned CDN dependency, expected board invariants, and repository hygiene.
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-The same suite runs on every push and pull request through GitHub Actions.
+The dependency-free static suite checks document structure,
+accessibility-critical controls, the pinned CDN dependency, expected board
+invariants, and repository hygiene. It runs on every push and pull request
+through GitHub Actions.
 
-## Contributing and security
+## Limits
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the change workflow and [SECURITY.md](SECURITY.md) for private vulnerability reporting guidance.
+- **Not a rules engine.** Pieces can move between any empty squares across levels. Turns and captures are tracked; legal chess movement, check, checkmate, castling, promotion, and draw rules are intentionally out of scope.
+- No AI opponent, no move history, no notation, no save/load, no multiplayer.
+- Requires network access on load (CDN-hosted Three.js) — it will not run fully offline.
+- The test suite is static: it inspects the document, not the rendered scene. Browser/GPU behavior needs a separate manual pass.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the change workflow and
+[SECURITY.md](SECURITY.md) for private vulnerability reporting.
